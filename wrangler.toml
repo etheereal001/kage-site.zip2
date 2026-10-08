@@ -6,4 +6,4 @@ compatibility_date = "2025-01-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "kage-db"
-database_id = "BURAYA-D1-ID-GELECEK"
+database_id = "83fa0647-002c-421f-b630-ba6662475a8f"
