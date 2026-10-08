@@ -1,0 +1,16 @@
+{
+  "name": "kage-anime",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "description": "KAGE anime sitesi — statik arayüz + Cloudflare Pages Functions + D1",
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "test": "node --test",
+    "db:create": "wrangler d1 create kage-db",
+    "db:init": "wrangler d1 execute kage-db --remote --file=db/schema.sql",
+    "deploy": "wrangler pages deploy public --project-name kage"
+  },
+  "devDependencies": { "wrangler": "^4.0.0" },
+  "engines": { "node": ">=22" }
+}

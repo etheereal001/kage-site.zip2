@@ -1,0 +1,14 @@
+/* ============================================================
+   Typography
+   ============================================================ */
+.display{font-family:var(--fd);font-weight:900;text-transform:uppercase;letter-spacing:-.045em;line-height:.9;margin:0}
+h1.display{font-size:clamp(2.5rem,7.4vw,6rem)}
+h2.display{font-size:clamp(1.5rem,3.6vw,2.5rem)}
+h3.display{font-size:clamp(1.1rem,2.2vw,1.6rem)}
+.muted{color:var(--muted)}
+.small{font-size:.8rem}
+.mono{font-variant-numeric:tabular-nums}
+.accent{color:var(--accent)}
+.accent3{color:var(--accent3)}
+.grad-txt{background:linear-gradient(96deg,var(--accent) 6%,var(--accent2) 52%,var(--accent3) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+

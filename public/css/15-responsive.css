@@ -1,0 +1,40 @@
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media(max-width:1180px){
+  .nav-search{width:min(200px,24vw)}
+  .nav-links a{font-size:.78rem;padding:.5rem .5rem}
+  .split{grid-template-columns:1fr}
+}
+@media(max-width:1020px){
+  .nav-links{display:none}
+  .hamb{display:flex}
+  .nav-search{width:min(260px,40vw)}
+  .hero-grid{grid-template-columns:1fr;gap:26px}
+  .hero-card{justify-self:start;max-width:230px}
+  .ft-grid{grid-template-columns:repeat(2,1fr)}
+  .cal{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+  .nav-search{display:none}
+  .dh-grid{grid-template-columns:1fr}
+  .dh-poster{max-width:190px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(142px,1fr));gap:12px}
+  .grid.wide{grid-template-columns:repeat(auto-fill,minmax(168px,1fr))}
+  .rank-item{grid-template-columns:auto 66px 1fr;gap:12px;padding:10px}
+  .rank-score{display:none}
+  .ep-list{grid-template-columns:1fr;max-height:430px}
+  .cal{grid-template-columns:1fr}
+  .hero-stats{gap:20px}
+  .pv-vol input{width:56px}
+  .player{aspect-ratio:9/16;max-height:74vh}
+  .split{grid-template-columns:1fr}
+  .modal{padding:20px}
+  .sec-head{align-items:flex-start}
+}
+@media(max-width:420px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .hero-card{max-width:200px}
+  .btn{padding:.66rem .95rem;font-size:.78rem}
+}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.001ms !important;transition-duration:.001ms !important}}

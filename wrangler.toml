@@ -1,0 +1,9 @@
+name = "kage"
+pages_build_output_dir = "public"
+compatibility_date = "2025-01-01"
+
+# `npm run db:create` komutunun yazdığı database_id değerini buraya yapıştır
+[[d1_databases]]
+binding = "DB"
+database_name = "kage-db"
+database_id = "BURAYA-D1-ID-GELECEK"

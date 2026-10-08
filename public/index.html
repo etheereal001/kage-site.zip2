@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KAGE · Anime İzleme Platformu — Binlerce Anime, Tek Adres</title>
+<meta name="description" content="KAGE ile popüler animeleri, güncel bölümleri ve sezonları keşfet; izleme listeni oluştur, favorilerini kaydet, kaldığın bölümden devam et.">
+<meta name="theme-color" content="#06060a">
+<meta name="keywords" content="anime izle, anime, türkçe altyazılı anime, anime bölümleri, anime takvimi, anime listesi">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KAGE">
+<meta property="og:title" content="KAGE · Anime İzleme Platformu">
+<meta property="og:description" content="Binlerce anime, güncel bölümler ve kişisel izleme listesi. Karanlıkta parlayan anime deneyimi.">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KAGE · Anime İzleme Platformu">
+<meta name="twitter:description" content="Binlerce anime, güncel bölümler ve kişisel izleme listesi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2307070a'/><text x='50' y='68' font-size='58' font-family='sans-serif' font-weight='900' fill='%23ff2b5e' text-anchor='middle'>影</text></svg>">
+<script type="application/ld+json" id="ldRoot">
+{"@context":"https://schema.org","@type":"WebSite","name":"KAGE","alternateName":"KAGE Anime","description":"Anime izleme, keşfetme ve takip platformu.","inLanguage":"tr-TR","potentialAction":{"@type":"SearchAction","target":"#/arama?q={search_term_string}","query-input":"required name=search_term_string"}}
+</script>
+<link rel="stylesheet" href="css/01-tokens.css">
+<link rel="stylesheet" href="css/02-typography.css">
+<link rel="stylesheet" href="css/03-layout.css">
+<link rel="stylesheet" href="css/04-buttons-forms.css">
+<link rel="stylesheet" href="css/05-navigation.css">
+<link rel="stylesheet" href="css/06-hero.css">
+<link rel="stylesheet" href="css/07-cards-grid.css">
+<link rel="stylesheet" href="css/08-lists.css">
+<link rel="stylesheet" href="css/09-detail.css">
+<link rel="stylesheet" href="css/10-watch-player.css">
+<link rel="stylesheet" href="css/11-comments.css">
+<link rel="stylesheet" href="css/12-admin-profile.css">
+<link rel="stylesheet" href="css/13-modal-support-footer.css">
+<link rel="stylesheet" href="css/14-animations.css">
+<link rel="stylesheet" href="css/15-responsive.css">
+</head>
+<body>
+
+<div class="app">
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="logo" href="#/" aria-label="KAGE ana sayfa">
+        <span class="logo-mark">影</span>
+        <span class="logo-text">KAGE<em>ANİME</em></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Ana menü"></nav>
+      <div class="nav-right">
+        <div class="nav-search">
+          <span class="si">⌕</span>
+          <input id="navSearch" type="search" placeholder="Anime, tür, stüdyo ara..." autocomplete="off" aria-label="Anime ara">
+          <div class="drop" id="searchDrop" role="listbox"></div>
+        </div>
+        <button class="btn btn-icon btn-ghost" data-act="open-support" title="Destek ve hızlı arama" aria-label="Destek">✉</button>
+        <div id="userArea" style="position:relative"></div>
+        <button class="hamb" data-act="toggle-menu" aria-label="Menü"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu"></div>
+  </header>
+
+  <main id="view" class="wrap" aria-live="polite"></main>
+
+  <footer class="ft">
+    <div class="wrap">
+      <div class="ft-grid">
+        <div>
+          <div class="logo" style="margin-bottom:14px"><span class="logo-mark">影</span><span class="logo-text">KAGE<em>ANİME</em></span></div>
+          <p style="max-width:44ch">Karanlıkta parlayan anime deneyimi. Binlerce başlık, sezon ve bölüm; kişisel izleme listen ve favorilerinle birlikte.</p>
+          <p class="small" style="color:var(--muted2)">KAGE bir demo projedir. İçerikler yalnızca tanıtım amaçlı örnek verilerdir; video kaynağı olarak kamu malı demo dosyalar kullanılır.</p>
+        </div>
+        <div>
+          <h5>Keşfet</h5>
+          <a href="#/animeler">Tüm Animeler</a>
+          <a href="#/kesfet">Keşfet</a>
+          <a href="#/turler">Türler</a>
+          <a href="#/populer">Popüler</a>
+          <a href="#/takvim">Yayın Takvimi</a>
+        </div>
+        <div>
+          <h5>Hesabım</h5>
+          <a href="#/profil">Profil</a>
+          <a href="#/favoriler">Favoriler</a>
+          <a href="#/listem">İzleme Listem</a>
+          <a href="#/yeni-bolumler">Yeni Bölümler</a>
+          <a href="#" data-act="open-support">Destek Talebi</a>
+        </div>
+        <div>
+          <h5>Kurumsal</h5>
+          <a href="#/hakkinda">Hakkımızda</a>
+          <a href="#/hakkinda">Kullanım Şartları</a>
+          <a href="#/hakkinda">Gizlilik &amp; KVKK</a>
+          <a href="#/admin">Yönetim Paneli</a>
+        </div>
+      </div>
+      <div class="ft-bottom">
+        <span>© <span id="year"></span> KAGE Anime · Tüm hakları saklıdır.</span>
+        <span>Anime verileri ve görseller temsilidir · <span class="accent3">Türkçe arayüz</span></span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<button class="fab" id="fab" data-act="open-support" aria-label="Destek talebi oluştur ve hızlı arama">
+  ✉<span class="bubble" id="fabBadge">?</span>
+</button>
+
+<div class="support" id="support" role="dialog" aria-label="Destek ve hızlı arama">
+  <div class="sp-head">
+    <b>KAGE Destek</b>
+    <button class="modal-x" style="position:static;width:30px;height:30px" data-act="close-support" aria-label="Kapat">✕</button>
+  </div>
+  <div class="sp-tabs">
+    <button data-act="support-tab" data-tab="search" class="on">Hızlı Arama</button>
+    <button data-act="support-tab" data-tab="ticket">Destek Talebi</button>
+  </div>
+  <div class="sp-body" id="supportBody"></div>
+</div>
+
+<div id="toasts"></div>
+<div id="overlayRoot"></div>
+
+<script defer src="js/config.js"></script>
+<script defer src="js/utils.js"></script>
+<script defer src="js/data/constants.js"></script>
+<script defer src="js/data/anime-seed.js"></script>
+<script defer src="js/core/store.js"></script>
+<script defer src="js/core/remote.js"></script>
+<script defer src="js/core/api.js"></script>
+<script defer src="js/ui/components.js"></script>
+<script defer src="js/core/router.js"></script>
+<script defer src="js/views/home.js"></script>
+<script defer src="js/views/browse.js"></script>
+<script defer src="js/views/anime.js"></script>
+<script defer src="js/views/watch.js"></script>
+<script defer src="js/views/comments.js"></script>
+<script defer src="js/views/profile.js"></script>
+<script defer src="js/views/admin.js"></script>
+<script defer src="js/core/render.js"></script>
+<script defer src="js/core/after-render.js"></script>
+<script defer src="js/ui/player.js"></script>
+<script defer src="js/ui/search.js"></script>
+<script defer src="js/ui/support.js"></script>
+<script defer src="js/ui/modals.js"></script>
+<script defer src="js/events/click.js"></script>
+<script defer src="js/events/forms.js"></script>
+<script defer src="js/boot.js"></script>
+</body>
+</html>

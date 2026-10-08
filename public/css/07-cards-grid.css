@@ -1,0 +1,34 @@
+/* ============================================================
+   Poster / cards / grid
+   ============================================================ */
+.poster{position:relative;aspect-ratio:2/3;border-radius:var(--r);overflow:hidden;background:linear-gradient(152deg,var(--c1) 0%,var(--c2) 72%);display:grid;place-items:center;isolation:isolate}
+.poster::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.58))}
+.poster .p-lines{position:absolute;inset:-30%;background:repeating-linear-gradient(58deg,rgba(255,255,255,.09) 0 2px,transparent 2px 13px);mix-blend-mode:overlay;transform:rotate(-6deg)}
+.poster .p-glyph{position:relative;z-index:2;font-family:var(--fd);font-weight:900;font-size:clamp(2.6rem,7vw,5.4rem);color:#fff;opacity:.94;line-height:1;text-shadow:0 10px 40px rgba(0,0,0,.55)}
+.poster .p-year{position:absolute;z-index:2;top:10px;left:12px;font-size:.68rem;font-weight:900;letter-spacing:.16em;color:rgba(255,255,255,.85)}
+.poster .p-foot{position:absolute;z-index:2;bottom:10px;left:12px;right:12px;font-size:.6rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:clamp(12px,1.6vw,20px)}
+.grid.wide{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.card{position:relative;cursor:pointer;border-radius:var(--r);transition:transform .3s cubic-bezier(.2,.7,.3,1)}
+.card:hover{transform:translateY(-7px)}
+.card-poster{position:relative;border-radius:var(--r);overflow:hidden;border:1.5px solid var(--line);transition:border-color .3s,box-shadow .3s}
+.card:hover .card-poster{border-color:var(--accent);box-shadow:0 24px 50px -24px rgba(255,43,94,.55)}
+.card-poster .poster{border-radius:0;transition:transform .5s cubic-bezier(.2,.7,.3,1)}
+.card:hover .card-poster .poster{transform:scale(1.07)}
+.badge{position:absolute;z-index:3;top:10px;right:10px;font-size:.6rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .55rem;border-radius:7px;backdrop-filter:blur(6px)}
+.badge-live{background:rgba(34,197,94,.16);color:#4ade80;border:1px solid rgba(74,222,128,.4)}
+.badge-done{background:rgba(255,255,255,.1);color:#c9c9d6;border:1px solid rgba(255,255,255,.16)}
+.score{position:absolute;z-index:3;bottom:10px;right:10px;font-size:.72rem;font-weight:900;color:var(--gold);background:rgba(0,0,0,.6);border:1px solid rgba(255,201,60,.35);padding:.22rem .5rem;border-radius:8px;backdrop-filter:blur(6px)}
+.card-over{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:9px;background:linear-gradient(180deg,rgba(4,4,8,.35),rgba(4,4,8,.86));opacity:0;transition:.28s;padding:12px}
+.card:hover .card-over,.card:focus-within .card-over{opacity:1}
+.card-title{font-family:var(--fd);font-weight:800;font-size:.94rem;letter-spacing:-.02em;margin:11px 0 2px;line-height:1.2;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card-jp{font-size:.72rem;color:var(--muted2);margin:0 0 7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card-meta{display:flex;gap:7px;align-items:center;font-size:.72rem;color:var(--muted);font-weight:700}
+.card-genres{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px}
+.card-genres span{font-size:.62rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted2);border:1px solid var(--line);padding:.16rem .42rem;border-radius:6px}
+
+/* horizontal scroll rows */
+.row-scroll{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(168px,168px);gap:16px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory}
+.row-scroll > *{scroll-snap-align:start}
+
